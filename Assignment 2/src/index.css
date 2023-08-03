@@ -1,0 +1,490 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191970;
+}
+
+.App {
+    background-color: #D3D3D3;
+    padding: 10px;
+    margin: 10px;
+    width: 900px;
+    height: 100%;
+}
+
+p {
+    font-weight: bold;
+}
+
+div {
+    background-color: #D3D3D3;
+    border: 0px solid black;
+}
+
+.notLoggedLink {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px;
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.loggedLink {
+    display: inline-block;
+    padding: 2px 4px;
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.loginTracker {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 400px;
+    height: 200px;
+}
+
+.userImage {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    background-color: #D3D3D3;
+}
+
+.userImage img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.loggedInDetails {
+    width: 200px;
+    height: 125px;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+
+.loggedInManage {
+    width: 200px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+
+.loggedInEdit {
+    width: 200px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+
+.loggedInLogoutButton {
+    width: 200px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+
+.big-link {
+    display: inline-block;
+    padding: 16px 32px;
+    margin: 20px;
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.title {
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.title h1 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title h2 {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.filmSearch {
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.filmSearch h3{
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.filmSearch input{
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.filmSearch input:focus{
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 3px #007bff;
+}
+
+.genreSearchSelection {
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.genreCheckBox {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.genreCheckBox label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.genreCheckBox input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.genreCheckBox input[type="radio"] {
+    margin-right: 8px;
+}
+
+.ageRatingSearchSelection {
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ageRatingCheckBox {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ageRatingCheckBox label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.ageRatingCheckBox input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.sortSearchSelection {
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sortRadioButton {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 150px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sortRadioButton label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sortRadioButton input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.allFilmResults {
+}
+
+.filmSearchResult {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 800px;
+    height: 280px;
+    margin: 10px 5px 5px 40px;
+}
+
+.filmImage {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    background-color: #D3D3D3;
+}
+
+.filmTitle {
+    width: 400px;
+    display: inline-block;
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.filmDetails {
+    width: 400px;
+    display: inline-block;
+    float: left;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.directorImage {
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    display: inline-block;
+    float: right;
+    background-color: #D3D3D3;
+}
+
+.filmLink {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filmPagination {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.paginationCurrentPage {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.filmPaginationList {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-content: center;
+    padding: 0;
+}
+
+.filmPaginationList li {
+    margin-right: 10px;
+}
+
+.filmPaginationList li:last-child {
+    margin-right: 0;
+}
+
+.filmPaginationList li button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menuLink {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0px 10px 0px;
+}
+
+.filmDetailedResult {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 800px;
+    height: 400px;
+    margin: 10px 5px 5px 40px;
+}
+
+.filmReviewButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.reviewTitle {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    margin: 10px 0px 10px 25%;
+    background-color: #007bff;
+    color: white;
+}
+
+.review {
+    width: 75%;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0px 10px 12%;
+}
+
+.reviewImage {
+    width: 30%;
+    float: left;
+    height: 200px;
+    overflow: hidden;
+}
+
+.reviewDetails {
+    width: 70%;
+    float: right;
+    height: 200px;
+}
+
+.similarFilmTitle {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    margin: 10px 0px 10px 25%;
+    background-color: #007bff;
+    color: white;
+}
+
+.manageTitle {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    margin: 10px 0px 10px 25%;
+    background-color: #007bff;
+    color: white;
+}
+
+.manageFilmDetailedResult {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 800px;
+    margin: 10px 10px 10px 45px;
+}
+
+.manageFilmImage {
+    width: 30%;
+    height: 300px;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    background-color: #D3D3D3;
+}
+
+.manageFilmTitle {
+    width: 70%;
+    display: inline-block;
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.manageFilmDetails {
+    width: 70%;
+    display: inline-block;
+    float: left;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.editDeleteDirectedFilm {
+    width: 30%;
+    display: inline-block;
+    float: left;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
